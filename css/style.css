@@ -23,16 +23,14 @@ body {
 }
 
 .logo {
-  width: 50%;
+  width: 60%;
   padding: 5% 2%;
 }
 
 .menu-aside {
-  display: flex;
   flex-direction: column;
   margin-right: 5%;
 }
-
 
 .menu-aside img{
   height: 20px;
@@ -43,16 +41,12 @@ body {
   text-decoration: none;
   list-style: none;
   color: grey;
-  padding: 3% 2%;
+  padding: 2% 2%;
   font-size: 12px;
 }
 
 .menu-item a:hover {
-  text-decoration: none;
-  list-style: none;
   color: white;
-  padding: 3% 2%;
-  font-size: 12px;
 }
 
 .menu-item i {
@@ -61,7 +55,7 @@ body {
 }
 
 .select {
-  border-left: 2px solid green;
+  border-left: 2px solid #adff2f;
 }
 
 .select a, h4 {
@@ -73,6 +67,12 @@ body {
 
 div.menu-item.flex {
   justify-content: center;
+}
+
+.menu-item.flex>a:first-child {
+  border-bottom: 2px solid #adff2f;
+  color: white;
+  font-weight: bold;
 }
 
 #upgrade-bar {
@@ -129,6 +129,11 @@ main {
   min-height: 200px;
 }
 
+.play-icon {
+  justify-content: center;
+  align-items: center;
+}
+
 .box-img img:hover {
   filter:opacity(30%);
 }
@@ -165,6 +170,10 @@ main {
   }
 }
 
+.play-icon {
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* Player */
 
