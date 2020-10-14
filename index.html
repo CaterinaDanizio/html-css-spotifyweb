@@ -4,22 +4,54 @@
     <meta charset="utf-8">
     <title>Layout Spotify</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   </head>
   <body>
     <div class="general-container flex">
 
       <section id="nav-menu">
         <div class="logo">
-
+          <img src="img/logo.svg" alt="logo Spotify">
         </div>
         <nav class="menu-aside">
-            <div class="menu-item">
-
+            <div class="menu-item top">
+              <ul>
+                <li>
+                  <div class="select">
+                  <a href="#"><img src="img/home.svg" alt="home icon">Home
+                  </a>
+                  </div>
+                </li>
             </div>
 
+
+            <div class="menu-item bottom">
+                <li><a href="#"><img src="img/search.svg" alt="search icon">Cerca</a></li>
+                <li><a href="#"><img src="img/libreria.svg" alt="library icon">La tua libreria</a></li>
+              </ul>
+              <h4>PLAYLIST</h4>
+              <ul>
+                <li><a href="#"> <i class="fas fa-plus-square"></i><strong>Crea la tua playlist</strong></a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+                <li><a href="#">Nome playlist</a></li>
+              </ul>
+            </div>
             <div class="menu-bottom">
+              INSTALLA APP
+
+
 
             </div>
+
+
         </nav>
 
       </section>
@@ -37,6 +69,15 @@
 
       <main>
         <div class="second-menu">
+          <div class="menu-item flex">
+            <a href="#">IN EVIDENZA</a>
+            <a href="#">PODCAST</a>
+            <a href="#">CLASSIFICHE</a>
+            <a href="#">GENERI E MOOD</a>
+            <a href="#">NUOVE USCITE</a>
+            <a href="#">SCOPRI</a>
+          </div>
+
 
         </div>
 
@@ -48,9 +89,12 @@
         <div class="playlist-container flex">
           <div class="box-img">
             <img src="img/metal_lifting.jpg" alt="">
-            <h4>Heave metal</h4>
-            <h5>Subtitle</h5>
+            <div class="caption">
+              <h4>Heavy metal</h4>
+              <h5>Subtitle</h5>
+            </div>
           </div>
+
 
           <div class="box-img">
             <img src="img/stranger.jpeg" alt="">
@@ -147,9 +191,9 @@
 
       </section>
 
-      <section id="player">
+      <footer id="player">
 
-      </section>
+      </footer>
 
     </div>
   </body>
