@@ -25,8 +25,10 @@ body {
 
 .logo {
   height: 10%;
-  width: 40%;
+  width: 50%;
   padding: 5% 2%;
+  /* debug */
+  /* border: 1px solid white; */
 }
 
 .menu-aside {
@@ -35,19 +37,22 @@ body {
   margin-right: 5%;
 }
 
-.menu-item.top {
+div.menu-item.top {
   height: 30%;
+  border: 1px solid white;
 }
 
-.menu-item.center {
+div.menu-item.center {
   height: 80%;
   overflow: auto;
+  border: 1px solid white;
 }
 
-.menu-item.bottom {
+div.menu-item.bottom {
   height: 10%;
   color: grey;
-  position: relative;
+  /* position: relative; */
+  border: 1px solid white;
 }
 
 .install {
@@ -55,14 +60,10 @@ body {
   padding: 2% 0;
 }
 
-
-
 .menu-aside img{
   height: 20px;
   padding-right: 2%;
 }
-
-
 
 .menu-item li,a, h4 {
   text-decoration: none;
@@ -102,6 +103,34 @@ body {
 .select a, h4 {
   color: white;
   font-weight: bolder;
+}
+
+/* Menu mobile */
+#nav-menu-mobile {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  #content-container {
+    width: calc(100vw - 50px);
+    }
+
+  #nav-menu {
+    display: none;
+  }
+  #nav-menu-mobile {
+    display: block;
+    width: 50px;
+    background-color: black;
+  }
+  #nav-menu-mobile img {
+    height: 30%;
+    padding: 5%;
+    margin: 0 10%;
+  }
+  .menu-aside {
+    justify-content: space-between;
+  }
 }
 
 /* Sezione centrale */
@@ -293,10 +322,11 @@ main {
   width: 40%;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .audio {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   color: white;
   font-size: 0.8rem;
@@ -313,10 +343,11 @@ main {
   content:"";
   position: absolute;
   height: 4px;
-  width: 150px;
+  width: 300px;
   background-color: grey;
   left: 100%;
   bottom: 40%;
+
 }
 
 .footer-right {
