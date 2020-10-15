@@ -9,6 +9,7 @@
 body {
   font-family: arial, verdana, sans-serif;
 }
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -23,19 +24,45 @@ body {
 }
 
 .logo {
-  width: 60%;
+  height: 10%;
+  width: 40%;
   padding: 5% 2%;
 }
 
 .menu-aside {
   flex-direction: column;
+  justify-content: space-between;
   margin-right: 5%;
 }
+
+.menu-item.top {
+  height: 30%;
+}
+
+.menu-item.center {
+  height: 80%;
+  overflow: auto;
+}
+
+.menu-item.bottom {
+  height: 10%;
+  color: grey;
+  position: relative;
+}
+
+.install {
+  border-bottom: 1px solid grey;
+  padding: 2% 0;
+}
+
+
 
 .menu-aside img{
   height: 20px;
   padding-right: 2%;
 }
+
+
 
 .menu-item li,a, h4 {
   text-decoration: none;
@@ -54,6 +81,20 @@ body {
   padding-right: 2%;
 }
 
+.profile img {
+  height: 30px;
+  border: solid 1px grey;
+  border-radius: 100%;
+  padding: 2%;
+  background-color: grey;
+  margin: 2% 0 1% 0;
+}
+
+.profile li>a {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
 .select {
   border-left: 2px solid #adff2f;
 }
@@ -65,15 +106,29 @@ body {
 
 /* Sezione centrale */
 
+  /* Menu principale */
+
 div.menu-item.flex {
   justify-content: center;
 }
 
 .menu-item.flex>a:first-child {
-  border-bottom: 2px solid #adff2f;
+  position: relative;
   color: white;
   font-weight: bold;
 }
+.menu-item.flex>a:first-child:after {
+  content:"";
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  background-color: #adff2f;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  /* Barra upgrade */
 
 #upgrade-bar {
   width: 100%;
@@ -87,19 +142,21 @@ div.menu-item.flex {
 }
 
 .button {
-  width: 25%;
   color: white;
+  font-size: 0.8rem;
   border: 1px solid white;
   border-radius: 20%;
-  padding: 1%;
+  padding: 1% 2%;
   margin-right: 2%;
   text-align: center;
   transition: all width 1s ease;
 }
 
 .button:hover {
-  width: 28%;
+  transform: scale(1.1,1.1);
 }
+
+  /* Sezione playlist */
 
 #content-container {
   width: 80%;
@@ -118,6 +175,11 @@ main {
   padding-top: 2%;
 }
 
+.title h4 {
+  padding: 1% 0;
+  color: grey;
+}
+
 .playlist-container {
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -129,18 +191,29 @@ main {
   min-height: 200px;
 }
 
-.play-icon {
-  justify-content: center;
-  align-items: center;
-}
-
-.box-img img:hover {
-  filter:opacity(30%);
-}
-
 .box-img img {
   width: 100%;
   padding: 2%;
+}
+
+.album {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.album i {
+  position: absolute;
+  opacity: 0;
+}
+
+.album:hover {
+  filter: opacity(0.4);
+}
+
+.album:hover i {
+  opacity: 1;
 }
 
 .circle img {
@@ -157,7 +230,7 @@ main {
   color: white;
 }
 
-/* Mediquery sezione centrale */
+  /* Mediquery sezione playlist */
 @media all and (max-width: 767px) {
   .box-img {
     width: calc(100% / 2);
@@ -170,15 +243,88 @@ main {
   }
 }
 
-.play-icon {
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Player */
+/* Footer - player */
 
 #player {
   width: 100vw;
   height: 60px;
   background-color: #090909;
+}
+
+/* Regole di debug */
+.container-footer {
+  justify-content: space-between;
+}
+
+.footer-left {
+  width: 20%;
+  height: 60px;
+  color: grey;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.footer-left img{
+  height: 70%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.name-album h5, h6 {
+  color: grey;
+}
+
+.name-album h5 {
+  font-weight: bolder;
+  color: white;
+}
+
+.icon {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon a {
+  color: white;
+}
+
+.footer-center {
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.audio {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.8rem;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+
+.audio i:last-child {
+  position: relative;
+}
+
+.audio i:last-child:after {
+  content:"";
+  position: absolute;
+  height: 4px;
+  width: 150px;
+  background-color: grey;
+  left: 100%;
+  bottom: 40%;
+}
+
+.footer-right {
+  width: 20%;
+  align-items: center;
+  justify-content:center;
+}
+
+.icon-right {
+  width: 100%;
 }

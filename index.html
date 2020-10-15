@@ -13,6 +13,7 @@
         <div class="logo">
           <img src="img/logo.svg" alt="logo Spotify">
         </div>
+
         <nav class="menu-aside flex">
             <div class="menu-item top">
               <ul>
@@ -22,14 +23,13 @@
                   </a>
                   </div>
                 </li>
-            </div>
-
-
-            <div class="menu-item bottom">
                 <li><a href="#"><img src="img/search.svg" alt="search icon">Cerca</a></li>
                 <li><a href="#"><img src="img/libreria.svg" alt="library icon">La tua libreria</a></li>
               </ul>
               <h4>PLAYLIST</h4>
+            </div>
+
+            <div class="menu-item center">
               <ul>
                 <li><a href="#"> <i class="fas fa-plus-square"></i><strong>Crea Playlist</strong></a></li>
               </ul>
@@ -44,10 +44,23 @@
                 <li><a href="#">Nome playlist</a></li>
               </ul>
             </div>
-            <div class="menu-bottom">
+
+            <div class="menu-item bottom">
+              <div class="install">
+                <ul>
+                  <li><a href="#"><img src="img/download.svg" alt="">Installa app</a></li>
+                </ul>
+
+              </div>
+
+              <div class="profile">
+                <ul>
+                  <li><img src="img/profile.svg" alt=""><a href="#">John Doe</a></li>
+                </ul>
+
+              </div>
+
             </div>
-
-
         </nav>
 
       </section>
@@ -58,7 +71,7 @@
       <section id="content-container">
         <div id="upgrade-bar">
           <div class="button">
-            <h5>EFFETTUA L'UPGRADE</h5>
+            EFFETTUA L'UPGRADE
           </div>
         </div>
 
@@ -82,7 +95,7 @@
 
         <div class="playlist-container flex">
           <div class="box-img ">
-            <div class="play-icon flex">
+            <div class="album flex">
               <img src="img/metal_lifting.jpg" alt="">
               <i class="far fa-play-circle"></i>
             </div>
@@ -95,7 +108,11 @@
 
 
           <div class="box-img">
-            <img src="img/stranger.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/stranger.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Stranger Things, Vol. 1 (a Netfllix Original Series Soundtrack)
               </h4>
@@ -105,7 +122,11 @@
           </div>
 
           <div class="box-img">
-            <img src="img/aquietplace.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/aquietplace.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>A quite place</h4>
               <h5>Subtitle</h5>
@@ -113,7 +134,11 @@
           </div>
 
           <div class="box-img">
-            <img src="img/split.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/split.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Split</h4>
               <h5>Subtitle</h5>
@@ -122,7 +147,11 @@
           </div>
 
           <div class="box-img">
-            <img src="img/cure.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/cure.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>A cure for wellness</h4>
               <h5>Subtitle</h5>
@@ -131,13 +160,16 @@
           </div>
 
           <div class="box-img">
-            <img src="img/sinister.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/sinister.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Sinister</h4>
               <h5>Subtitle</h5>
             </div>
           </div>
-
         </div>
 
 
@@ -145,18 +177,27 @@
      <!-- Sottosezione "Creato per John Doe" -->
         <div class="title">
           <h2>Creato per John Doe</h2>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
         </div>
 
         <div class="playlist-container flex">
           <div class="box-img">
-            <img src="img/radar.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/radar.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Radar</h4>
             </div>
           </div>
 
           <div class="box-img">
-            <img src="img/mixdaily.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/mixdaily.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Dayly Mix 1</h4>
             </div>
@@ -171,14 +212,22 @@
 
         <div class="playlist-container flex">
           <div class="box-img circle">
-            <img src="img/youg.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/youg.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Lana Del Rey</h4>
             </div>
           </div>
 
           <div class="box-img circle">
-            <img src="img/einaudi.jpeg" alt="">
+            <div class="album flex">
+              <img src="img/einaudi.jpeg" alt="">
+              <i class="far fa-play-circle"></i>
+            </div>
+
             <div class="caption">
               <h4>Einaudi</h4>
             </div>
@@ -190,6 +239,43 @@
       </section>
 
       <footer id="player">
+        <div class="container-footer flex">
+          <div class="footer-left flex">
+            <img src="img/sinister.jpeg" alt="">
+            <div class="name-album">
+              <h5>Sinister</h5>
+              <h6>Brano nome</h6>
+            </div>
+            <i class="far fa-heart"></i>
+            <i class="far fa-folder"></i>
+
+          </div>
+
+          <div class="footer-center flex">
+            <div class="icon flex">
+              <a href="#"><i class="fas fa-step-backward"></i></a>
+              <a href="#"><i class="far fa-play-circle"></i></a>
+              <a href="#"><i class="fas fa-step-forward"></i></a>
+              <a href="#"><i class="fas fa-redo-alt"></i></a>
+            </div>
+            <div class="audio flex">
+            <a href="#">0.25</a>
+            <a href="#"><i class="fas fa-circle"></i></a>
+            </div>
+
+          </div>
+
+          <div class="footer-right flex">
+            <div class="icon-right">
+              <a href="#"><i class="fas fa-step-backward"></i></a>
+              <a href="#"><i class="far fa-play-circle"></i></a>
+              <a href="#"><i class="fas fa-step-forward"></i></a>
+              <a href="#"><i class="fas fa-redo-alt"></i></a>
+            </div>
+
+          </div>
+
+        </div>
 
       </footer>
 
