@@ -383,13 +383,12 @@ div.menu-item.flex {
 
 /* Mediaquery footer */
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 660px) {
   .footer-left {
     max-width: 30%;
-    justify-content: center;
     flex-wrap: nowrap;
   }
-    }
+
 
     .footer-right {
       max-width: 30%;
@@ -399,10 +398,15 @@ div.menu-item.flex {
 
     .footer-center {
       max-width: 40%;
-      flex-shrink: 1;
     }
 
     .audio i:last-child:after {
-      width: 200px;
+      width: 150px;
     }
   }
+
+  @media all and (max-width: 436px) {
+    .audio i:last-child:after {
+      width: 100px;
+    }
+    }
