@@ -15,6 +15,10 @@ body {
   flex-wrap: wrap;
 }
 
+a:hover {
+  color: white;
+}
+
 /* Menu di navigazione */
 
 #nav-menu {
@@ -24,40 +28,30 @@ body {
 }
 
 .logo {
-  height: 10%;
   width: 50%;
   padding: 5% 2%;
-  /* debug */
-  /* border: 1px solid white; */
 }
 
 .menu-aside {
+  height: calc(100vh - 60px);
+  flex-wrap: nowrap;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 5%;
 }
 
 div.menu-item.top {
-  height: 30%;
-  border: 1px solid white;
+  height: 20%;
 }
 
 div.menu-item.center {
-  height: 80%;
+  max-height: 60%;
   overflow: auto;
-  border: 1px solid white;
 }
 
 div.menu-item.bottom {
-  height: 10%;
+  height: 30%;
   color: grey;
-  /* position: relative; */
-  border: 1px solid white;
-}
-
-.install {
-  border-bottom: 1px solid grey;
-  padding: 2% 0;
 }
 
 .menu-aside img{
@@ -73,13 +67,16 @@ div.menu-item.bottom {
   font-size: 12px;
 }
 
-.menu-item a:hover {
-  color: white;
-}
-
 .menu-item i {
   font-size: 40px;
   padding-right: 2%;
+}
+
+ /* Sezione Installa app e profile */
+
+.install {
+  border-bottom: 1px solid grey;
+  padding: 2% 0;
 }
 
 .profile img {
@@ -105,26 +102,36 @@ div.menu-item.bottom {
   font-weight: bolder;
 }
 
-/* Menu mobile */
+/* Menu responsive */
 #nav-menu-mobile {
   display: none;
 }
 
 @media all and (max-width: 767px) {
   #content-container {
-    width: calc(100vw - 50px);
+    display: none;
+  }
+  .content-container-mobile {
+    display: block;
+    width: 90%;
+    height: calc(100vh -60px);
+    background-color: black;
     }
 
-  #nav-menu {
+  footer {
+    height: 60px;
+  }
+
+   #nav-menu {
     display: none;
   }
   #nav-menu-mobile {
     display: block;
-    width: 50px;
+    width: 10%;
     background-color: black;
   }
   #nav-menu-mobile img {
-    height: 30%;
+    height: 20%;
     padding: 5%;
     margin: 0 10%;
   }
@@ -133,6 +140,11 @@ div.menu-item.bottom {
   }
 }
 
+@media all and (min-width: 1190px) {
+  div.menu-item.bottom {
+    max-height: 30%;
+  }
+}
 /* Sezione centrale */
 
   /* Menu principale */
@@ -187,7 +199,7 @@ div.menu-item.flex {
 
   /* Sezione playlist */
 
-#content-container {
+.content-container {
   width: 80%;
   height: calc(100vh - 60px);
   background-color: #121212;
@@ -195,7 +207,7 @@ div.menu-item.flex {
   overflow: auto;
 }
 
-main {
+.main {
   width: 95%;
   margin: 0 auto;
 }
@@ -261,6 +273,15 @@ main {
 
   /* Mediquery sezione playlist */
 @media all and (max-width: 767px) {
+  .content-container {
+    display: none;
+  }
+
+  .content-container-mobile {
+    display: block;
+    width: 90%;
+    height: calc(100vh - 60px);
+  }
   .box-img {
     width: calc(100% / 2);
   }
@@ -300,7 +321,7 @@ main {
   padding-right: 3%;
 }
 
-.name-album h5, h6 {
+.name-album h6 {
   color: grey;
 }
 
@@ -359,3 +380,29 @@ main {
 .icon-right {
   width: 100%;
 }
+
+/* Mediaquery footer */
+
+@media all and (max-width: 600px) {
+  .footer-left {
+    max-width: 30%;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+    }
+
+    .footer-right {
+      max-width: 30%;
+      flex-wrap: nowrap;
+    }
+
+
+    .footer-center {
+      max-width: 40%;
+      flex-shrink: 1;
+    }
+
+    .audio i:last-child:after {
+      width: 200px;
+    }
+  }
